@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit:900");
+body {
+    background: #eacccc;
+    user-select: none;
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 452px;
+
+}
+.clock p{
+    width: 70px;
+    text-align: center;
+
+    font-family: kanit;
+    font-size: 100px;
+    color: #fff;
+
+    float: left;
+    margin: -3px;
+
+    text-shadow: 0 15px 15px #daaeae;
+}
+
+.clock p:nth-child(3n) {
+    width: 40px;
+}
