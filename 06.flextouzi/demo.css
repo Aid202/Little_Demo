@@ -1,0 +1,87 @@
+body {
+    background-color: bisque;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    transform-style: preserve-3d;
+}
+
+@keyframes move {
+    form {
+        transform: rotateY(0deg) rotateZ(0deg);
+    }
+    to{
+        transform: rotateY(360deg) rotateZ((360deg));
+    }
+}
+
+div {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  */
+    flex-wrap: wrap;
+}
+div:nth-child(2) {
+    /* 垂直排列 */
+    flex-direction: column;
+    /* 对齐方式 均匀排列每个元素*/
+    justify-content: space-around;
+}
+div:nth-child(3) {
+    padding: 10px;
+    box-sizing: border-box;
+}
+/* 第三个div里面的第一个span */
+div:nth-child(3) span:nth-child(1) {
+    /* 从侧轴的起点 */
+    align-self: flex-start;
+}
+div:nth-child(3) span:nth-child(3) {
+    /* 从侧轴的终点 */
+    align-self: flex-end;
+}
+span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+}
+nav {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    /* 主轴位置 */
+    justify-content: space-around;
+}
+#ff {
+    transform: rotateY(90deg) translateZ(150px);
+}
+#aa {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+#bb {
+    transform: rotateY(0deg) translateZ(150px);
+}
+#cc {
+    transform: rotateY(180deg) translateZ(150px);
+}
+#dd {
+    transform: rotateX(90deg) translateZ(150px);
+}
+#ee {
+    transform: rotateY(-90deg) translateZ(150px);
+}
